@@ -9,7 +9,7 @@ The network topology we used in the bootcamp was implemented on Raspberry Pi 4 d
 
 ![Image](images/Network_Topology.png)
 
-## Configurations
+## Network Configurations
 
 [Router 2 Configurations](network/router-2/conf.md)
 
