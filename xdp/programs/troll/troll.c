@@ -14,7 +14,7 @@ struct vlan_hdr {
 };
 
 SEC("prog")
-int xdp_ibnelik(struct xdp_md *ctx) {
+int xdp_troll(struct xdp_md *ctx) {
 	void *data = (void *)(long)ctx->data;
 	void *data_end = (void *)(long)ctx->data_end;
 
