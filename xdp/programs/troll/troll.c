@@ -21,7 +21,6 @@ int xdp_troll(struct xdp_md *ctx) {
     struct ethhdr *eth = data;
     struct vlan_hdr *vhdr;
 
-    // VLAN kontrolü
     if (eth->h_proto == htons(ETH_P_8021Q)) {
         vhdr = (struct vlan_hdr *)(eth + 1);
         if ((void *)(vhdr + 1) > data_end) {
