@@ -29,7 +29,7 @@ This program is an **eBPF application** that counts incoming IP packets using **
 - **TTL**
 - **Packet Count** for each unique combination.
 
-📝 You can find the source code for the Packet Counter program here: **[Packet Counter Program](xdp/ip/ip_counter.c)**.
+📝 You can find the source code for the Packet Counter program here: **[Packet Counter Program](xdp/programs/ip/ip_counter.c)**.
 
 📊 To read the map, check out the **[Packet Counter MAP Reader](xdp/programs/ip/ip_counter_map_reader.c)**.
 
