@@ -17,4 +17,4 @@ The network topology we used in the bootcamp was implemented on Raspberry Pi 4 d
 
 For insights on compiling, loading, and managing maps, explore the Compile & Load & Look documentation below.
 
-[Compile & Load & Look](xdp-programs/CLL.md)
+[Compile & Load & Look](xdp/CLL.md)
