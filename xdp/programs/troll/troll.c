@@ -6,7 +6,7 @@
 #include <linux/random.h>
 
 #define TARGET_IP 0 // Set the TARGET_IP before running the program
-#define DROP_RATE 10
+#define DROP_RATE 10 // Probability of dropping the packet
 
 struct vlan_hdr {
     __be16 h_vlan_TCI;
@@ -35,15 +35,13 @@ int xdp_troll(struct xdp_md *ctx) {
         return XDP_DROP;
     }
 
-    if (iph->daddr != htonl(TARGET_IP)) {
-        return XDP_DROP;
-    }
-
-    u32 rand_num;
-    get_random_bytes(&rand_num, sizeof(rand_num));
-    
-    if (rand_num % DROP_RATE == 0) {
-        return XDP_DROP; 
+    if (iph->daddr == htonl(TARGET_IP)) {
+        u32 rand_num;
+        get_random_bytes(&rand_num, sizeof(rand_num));
+        
+        if (rand_num % DROP_RATE == 0) {
+            return XDP_DROP; 
+        }
     }
 
     return XDP_PASS; 
