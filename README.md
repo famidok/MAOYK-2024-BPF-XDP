@@ -37,5 +37,5 @@ This program is an **eBPF application** that counts incoming IP packets using **
 
 This program is an **eBPF application** that selectively drops incoming packets targeting a specified IP address at a defined random rate using **XDP (eXpress Data Path)**. It processes Ethernet and VLAN headers and ensures that only packets with the defined target IP are subject to the drop rate.
 
-📝 You can find the source code for the XDP Troll program here: **[XDP Troll Program](xdp/programs/ip/troll.c)**.
+📝 You can find the source code for the XDP Troll program here: **[XDP Troll Program](xdp/programs/troll/troll.c)**.
 
