@@ -33,6 +33,10 @@ This program is an **eBPF application** that counts incoming IP packets using **
 
 📊 To read the map, check out the **[Packet Counter MAP Reader](xdp/programs/ip/ip_counter_map_reader.c)**.
 
+## :camera: Running Program Instance
+
+![Packet Info Example](images/packet_info_example.png)
+
 ### :trollface: Troll Program 
 
 This program is an **eBPF application** that selectively drops incoming packets targeting a specified IP address at a defined random rate using **XDP (eXpress Data Path)**. It processes Ethernet and VLAN headers and ensures that only packets with the defined target IP are subject to the drop rate.
